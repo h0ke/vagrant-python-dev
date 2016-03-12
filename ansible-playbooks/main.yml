@@ -1,0 +1,11 @@
+---
+- hosts: all
+  user: vagrant
+  sudo: true
+  sudo_user: root
+
+  roles:
+    - role: ansible-nginx
+    - role: ansible-softwares
+    - role: ansible-postgresql
+    - role: ansible-setup-app

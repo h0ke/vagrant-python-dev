@@ -1,0 +1,6 @@
+---
+- name: Manually create the initial virtualenv
+  command: virtualenv /home/vagrant/app creates="/home/vagrant/app"
+
+- name: install pto_tracker
+  shell: "cd /srv/pto-tracker; source ~/app/bin/activate; /home/vagrant/app/bin/python setup.py develop"
